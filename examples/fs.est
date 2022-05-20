@@ -1,0 +1,25 @@
+var msg str Enter your name:
+var input str 
+var count int 0
+var max int 0
+var splitter str 
+
+input input msg
+split splitter input
+getsize max splitter
+func d 15
+func start 18
+jump start
+
+d:
+    input input \s
+    exit
+start:
+    if count >= max d
+    var char str 
+    getchar char splitter count
+    count++
+    var newline str \n
+    add char newline
+    print char
+    jump start

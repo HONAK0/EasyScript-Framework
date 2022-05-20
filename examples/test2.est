@@ -1,0 +1,26 @@
+var countops int 16
+var count int 0
+var +ops int 9
+var starttime int 0
+var maxcount int 1000
+gt starttime
+
+pnt stop 12
+pnt start 16
+jmp start
+
+stop:
+    out countops
+    ext
+
+start:
+    var curtime int 0
+    add curtime starttime
+    add curtime count
+    count++
+    var maxtime int 0
+    add maxtime starttime
+    add maxtime maxcount
+    if curtime >= maxtime stop
+    add countops +ops
+    jmp start
